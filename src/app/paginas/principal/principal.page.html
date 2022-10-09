@@ -1,0 +1,43 @@
+<ion-header>
+  <!-- ENCABEZADO -->
+  <ion-toolbar color="success">
+    <ion-title>PRINCIPAL</ion-title>
+
+    <!-- Avatar -->
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="/assets/img/avatar.jpg">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-button shape="round" color="dark" routerLink="/producto">Productos</ion-button>
+    <ion-button shape="round" color="dark" (click)="scannerCode()">Scanear</ion-button>
+
+    <!-- <form #formulario="ngForm" (ngSubmit)="buscar()">
+      <ion-list>  
+        <ion-item>
+          <ion-label position="floating">*Codigo:</ion-label>
+          <ion-input type="text"
+                    name="codigo"
+                    required
+                    [(ngModel)]="cod"
+          ></ion-input>
+        </ion-item>        
+      </ion-list>
+  
+      <ion-button type="submit" [disabled]="formulario.invalid">Enviar</ion-button>
+      
+    </form> -->
+
+    <!-- <ion-button shape="round" color="dark" (click)="listar()">Vector en consola</ion-button> -->
+
+    <ion-button shape="round" color="dark" routerLink="/inventario" (click)="mostrarInventario()">Procesar</ion-button>
+
+  </div>
+
+  
+</ion-content>

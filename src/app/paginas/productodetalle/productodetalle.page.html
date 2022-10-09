@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>{{titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Codigo:</ion-label>
+        <ion-input type="text"
+                   name="codigo"
+                   [(ngModel)]="objProducto.codigo"
+                   required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input type="text"
+                   name="nombre"
+                   [(ngModel)]="objProducto.nombre"
+                   required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Descripcion:</ion-label>
+        <ion-input type="text"
+                   name="descripcion"
+                   [(ngModel)]="objProducto.descripcion"
+                   required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Precio:</ion-label>
+        <ion-input type="number"
+                   name="precio"
+                   [(ngModel)]="objProducto.precio"
+                   required
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button shape="round" expand="full" type="submit" [disabled]="formulario.invalid" color="success">Guardar</ion-button>
+  </form>
+
+  <ion-button shape="round" expand="full" (click)="cerrar()" color="danger">Cerrar</ion-button>
+
+</ion-content>

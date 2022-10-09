@@ -1,0 +1,6 @@
+{
+	"appId": "com.cedenorichards.appinventario",
+	"appName": "appInventario",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

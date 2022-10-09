@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Inventario</ion-title>
+
+    <!-- boton de retroceso -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-title>PRODUCTOS DEL INVENTARIO</ion-title>
+    <ion-list-header>
+      <ion-label>CODIGO</ion-label>
+      <ion-label>NOMBRE</ion-label>
+      <ion-label>DESCIPCION</ion-label>
+      <ion-label>PRECIO</ion-label>
+    </ion-list-header>
+  </ion-list>
+
+  <ion-item *ngFor="let item of Inventario">
+      <ion-label text-wrap>{{item.codigo}}</ion-label>
+      <ion-label text-wrap>{{item.nombre}}</ion-label>
+      <ion-label text-wrap>{{item.descripcion}}</ion-label>
+      <ion-label text-wrap>{{item.precio}}</ion-label>
+  </ion-item>
+
+  <br><br>
+
+  <ion-list>
+    <ion-title>PRODUCTOS FALTANTES</ion-title>
+    <ion-list-header>
+      <ion-label>CODIGO</ion-label>
+      <ion-label>NOMBRE</ion-label>
+      <ion-label>DESCIPCION</ion-label>
+      <ion-label>PRECIO</ion-label>
+    </ion-list-header>
+  </ion-list>
+
+  <ion-item *ngFor="let item of Faltantes">
+    <ion-label text-wrap>{{item.codigo}}</ion-label>
+    <ion-label text-wrap>{{item.nombre}}</ion-label>
+    <ion-label text-wrap>{{item.descripcion}}</ion-label>
+    <ion-label text-wrap>{{item.precio}}</ion-label>
+</ion-item>
+
+
+</ion-content>

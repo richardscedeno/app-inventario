@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">appInventario</string>
+    <string name="title_activity_main">appInventario</string>
+    <string name="package_name">com.cedenorichards.appinventario</string>
+    <string name="custom_url_scheme">com.cedenorichards.appinventario</string>
+</resources>
